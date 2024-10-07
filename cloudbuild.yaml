@@ -12,8 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-substitutions:
-  _REGION: us-central1
+#substitutions:
+#  _REGION: us-central1
 steps:
 - name: 'gcr.io/k8s-skaffold/skaffold'
   entrypoint: 'sh'
@@ -44,6 +44,7 @@ steps:
                         --delivery-pipeline cicd-sample \
                         --description "$(git log -1  --pretty='%s')" \
                         --build-artifacts /workspace/artifacts.json #\
+                        #--annotations "commit_ui=https://source.cloud.google.com/$PROJECT_ID/cicd-sample/+/$COMMIT_SHA"
 artifacts:
   objects:
     location: 'gs://$PROJECT_ID-gceme-artifacts/'
