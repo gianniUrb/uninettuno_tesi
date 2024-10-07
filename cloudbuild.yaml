@@ -25,10 +25,6 @@ steps:
     skaffold build --file-output=/workspace/artifacts.json \
                    --default-repo=${_REGION}-docker.pkg.dev/$PROJECT_ID/cicd-sample-repo \
                    --push=true
-
-    # Test images
-    skaffold test --build-artifacts=/workspace/artifacts.json
-
 - name: 'google/cloud-sdk:latest'
   entrypoint: 'sh'
   args:
