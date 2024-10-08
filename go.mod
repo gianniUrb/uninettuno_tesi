@@ -1,4 +1,4 @@
-module github.com/GoogleCloudPlatform/golden-path-for-app-delivery/cicd-sample
+module github.com/GoogleCloudPlatform/uninettuno_tesi/cicd-sample
 
 go 1.16
 
